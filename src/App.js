@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 class App extends Component {
 
@@ -18,12 +21,12 @@ class App extends Component {
         { title: 'Contact', path: '/contact' },
       ],
       home: {
-        title: "A title here",
-        subtitle: "Projects that make a different",
-        text: "Checkout my projects below"
+        title: "my title here",
+        subtitle: "projects",
+        text: "checkout my projects below"
       },
       about: {
-        title: "about me"
+        title: "About me"
       },
       contact: {
         title: "Let's talk"
@@ -45,9 +48,10 @@ class App extends Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-
+            <Route path="/" exact render={() => <Home title={this.state.home.title} subtitle={this.state.home.subtitle} text={this.state.home.text} />}/>
+            <Route path="/about" exact render={() => <About title={this.state.about.title} />} />
+            <Route path="/contact" exact render={() => <Contact title={this.state.contact.title} />} />
           <Footer />
-
         </Container>
       </Router>
     );
