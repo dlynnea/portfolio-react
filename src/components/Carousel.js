@@ -40,6 +40,7 @@ class Carousel extends Component {
     }
 
     handleClick = (id, card) => {
+        console.log(id)
         let items = [...this.state.items]
         items[id].selected = items[id].selected ? false : true
         items.forEach(item => {
@@ -54,7 +55,7 @@ class Carousel extends Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} onClick={(event => this.handleClick(item.id, event))} key={item.id} />
+            return <Card item={item} click={(event => this.handleClick(item.id, event))} key={item.id} />
         })
     }
 
