@@ -7,10 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 .d-card {
   margin: 20px;
@@ -43,7 +43,7 @@ code {
   padding: 10px 15px;
 }
 
-.rr-message {
+.err-message {
   color: #EE6352;
   padding: 10px 15px;
 }
