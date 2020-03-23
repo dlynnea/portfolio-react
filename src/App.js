@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -21,15 +21,15 @@ class App extends Component {
         { title: 'Contact', path: '/contact' },
       ],
       home: {
-        title: "my title here",
-        subtitle: "projects",
-        text: "checkout my projects below"
+        title: "Danielle",
+        subtitle: "Web Developer. Programmer. Designer.",
+        text: "Take a look at a few of my most recent projects... "
       },
       about: {
-        title: "About me"
+        title: "A little about me"
       },
       contact: {
-        title: "Let's talk"
+        title: "Let's connect"
       }
     }
   }
@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <Router>
         <Container className="p-0" fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Danielle Matton</Navbar.Brand>
+          <Navbar className="border-bottom" expand="lg">
+            <Navbar.Brand className="nav-name"><i class="fab fa-connectdevelop"></i></Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">

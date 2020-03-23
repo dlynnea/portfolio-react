@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Hero from '../components/Hero'
+import Main from '../components/Main'
 import Content from '../components/Content'
 import Axios from 'axios'
 
@@ -59,7 +59,7 @@ class Contact extends Component {
     render() {
             return(
                 <div>
-                    <Hero title={this.props.title} />
+                    <Main title={this.props.title} />
                     <Content>
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Group>
@@ -79,6 +79,11 @@ class Contact extends Component {
                             </Button>
                             {this.state.emailSent === true && <p className="d-inline success-message">Email Sent</p>}
                             {this.state.emailSent === false && <p className="d-inline err-message">Email Not Sent</p>}
+                            <div class="icons-contact">
+                                <a href="https://twitter.com/dlynneaa" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/danielle-matton/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://github.com/dlynnea" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                            </div>
                         </Form>
                     </Content>
                 </div>

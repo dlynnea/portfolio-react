@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Card from './Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import plant from '../images/plant.jpg';
+import curator from '../images/curator.png';
 import shape from '../images/shape.jpg';
 import hardware from '../images/hardware.jpg';
 
@@ -13,10 +13,10 @@ class Carousel extends Component {
             items: [
                 {
                     id: 0,
-                    title: 'Plant',
-                    subtitle: 'my project',
-                    img: plant,
-                    link: '',
+                    title: 'Curator',
+                    subtitle: 'Content Aggregator',
+                    img: curator,
+                    link: 'https://kurator-feed.firebaseapp.com',
                     selected: false
                 },
                 {

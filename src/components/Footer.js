@@ -9,8 +9,8 @@ export default function Footer() {
         <footer className="mt-5">
             <Container fluid={true}>
                 <Row className="border-top justify-content-between p-3">
-                    <Col className="p-0" md={3} sm={12}>Danielle Matton</Col>
-                    <Col className="p-0 d-flex justify-content-end" md={3}>This site was made by Danielle Matton</Col>
+                    <Col className="p-0" md={3} sm={12}></Col>
+                    <Col className="p-0 d-flex justify-content-end" md={3}>&hearts; Created by Danielle Matton</Col>
                 </Row>
             </Container>
         </footer>
