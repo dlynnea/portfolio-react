@@ -1,13 +1,14 @@
 import React from 'react'
 import Main from '../components/Main'
-import Projects from '../components/Projects'
+import Links from '../components/Links'
 
-export default function Home(props) {
-
+function Blog(props) {
     return(
         <div>
             <Main title={props.title} subtitle={props.subtitle} text={props.text} />
-            <Projects />
+            <Links />
         </div>
     )
 }
+
+export default Blog;

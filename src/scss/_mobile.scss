@@ -1,0 +1,124 @@
+
+// widescreens
+@include mediaXl {
+    .d-card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+// desktops and laptops
+@include mediaLg {
+    .d-card {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+// tablets and small laptops
+@include mediaMd {
+    #root {
+        align-items: center;
+        text-align: center;
+
+        .navbar-nav {
+            margin-top: 8px;
+            align-items: right;
+            text-align: right;
+            position: relative;
+            z-index: 2;
+        }
+        .display-1 {
+            position: relative;
+            z-index: 1;
+            line-height: 1;
+            margin-top: 3rem;
+        }
+        .display-4 {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .lead {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        .aboutme {
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    // smartphones
+    @include mediaSm {
+        #root {
+            align-items: center;
+            text-align: center;
+
+            .navbar-nav {
+                margin-top: 6px;
+                margin-bottom: 6px;
+                align-items: right;
+                text-align: right;
+            }
+
+            .display-1 {
+                margin-top: 1rem;
+            }
+
+            .aboutme {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .nav-link {
+            }
+        }
+        
+        .bg-transparent {
+            margin-top: 5vh;
+        }
+    
+        .d-card {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // ul.menu-nav, div.menu-branding {
+    //     float: none;
+    //     width: 100%;
+    //     min-height: 0;
+        
+    //     &.show {
+    //         transform: translate3d(0, 0, 0);
+    //     }
+    // }
+
+    // .menu-nav {
+    //     height: 75vh;
+    //     transform: translate3d(-100%, 0, 0);
+    //     font-size: 24px;
+    // }
+
+    // .menu-branding {
+    //     height: 25vh;
+    //     transform: translate3d(100%, 0, 0);
+
+    //     .portrait {
+    //         background: url(../img/portrait_small.jpg);
+    //         width: 150px;
+    //         height: 150px;
+    //     }
+    // }
+
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

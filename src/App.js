@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './scss/App.scss';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
 
 class App extends Component {
 
@@ -30,6 +31,9 @@ class App extends Component {
       },
       contact: {
         title: "Let's connect"
+      },
+      blog: {
+        title: "Blog"
       }
     }
   }
@@ -38,19 +42,21 @@ class App extends Component {
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar className="border-bottom" expand="lg">
-            <Navbar.Brand className="nav-name"><i class="fab fa-connectdevelop"></i></Navbar.Brand>
+            <Navbar.Brand className="nav-name">Danielle Matton</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to="/blog">Blog</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
             <Route path="/" exact render={() => <Home title={this.state.home.title} subtitle={this.state.home.subtitle} text={this.state.home.text} />}/>
             <Route path="/about" exact render={() => <About title={this.state.about.title} />} />
             <Route path="/contact" exact render={() => <Contact title={this.state.contact.title} />} />
+            <Route path="/blog" exact render={() => <Blog title={this.state.blog.title} />} />
           <Footer />
         </Container>
       </Router>
