@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import BlogCard from './BlogCard';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import curator from '../images/curator.png';
@@ -71,7 +71,7 @@ class Links extends Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} click={(event => this.handleClick(item.id, event))} key={item.id} />
+            return <BlogCard item={item} click={(event => this.handleClick(item.id, event))} key={item.id} />
         })
     }
 
@@ -85,5 +85,7 @@ class Links extends Component {
           );
     }
 }
+
+
  
 export default Links;

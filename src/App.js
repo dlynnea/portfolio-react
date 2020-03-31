@@ -39,6 +39,7 @@ class App extends Component {
   }
   render() {
     return (
+      <>
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar className="border-bottom" expand="lg">
@@ -57,9 +58,10 @@ class App extends Component {
             <Route path="/about" exact render={() => <About title={this.state.about.title} />} />
             <Route path="/contact" exact render={() => <Contact title={this.state.contact.title} />} />
             <Route path="/blog" exact render={() => <Blog title={this.state.blog.title} />} />
-          <Footer />
         </Container>
       </Router>
+          <Footer />
+          </>
     );
   }
 }

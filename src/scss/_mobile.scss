@@ -47,7 +47,11 @@
 
     // smartphones
     @include mediaSm {
-        #root {
+        html {
+            height: 100%;
+          }
+
+        body {
             align-items: center;
             text-align: center;
 
@@ -70,6 +74,10 @@
 
             .nav-link {
             }
+        }
+
+        .footer {
+            height: 60px;
         }
         
         .bg-transparent {

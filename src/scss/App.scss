@@ -3,13 +3,17 @@
 
 * {
   box-sizing: border-box;
+  font-family: $raleway;
 }
+
+// html {
+//   height: 100vh;
+// }
 
 body {
   @include background;
   background: $background-color;
   color: set-text-color($background-color);
-  font-family: $raleway;
   background-color: $off-white;
   margin: 0;
   height: 100%;
@@ -18,15 +22,26 @@ body {
   background-attachment: fixed;
 }
 
-nav.navbar {
-  height: 5rem;
+// .App {
+//   height: 100%;
+// }
+
+// #root {
+//   height: 100vh;
+// }
+
+// div.p-0 {
+//   height: 100%;
+// }
+
+.title-container {
   background-color: $light-leaves;
 }
 
-div.container-fluid > .justify-content-center > h1 {
-  background: url('../leaves.jpg') no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+nav.navbar {
+  height: 7rem;
+  // background-color: $light-leaves;
+  background-color: rgba(246, 246, 246, 0.8);
 }
 
 h1.display-1 {
@@ -35,28 +50,6 @@ h1.display-1 {
 
 .d-card {
   margin: 10px;
-}
-
-.d-card-image {
-  border-radius: 10px;
-  width: 300px;
-  height: 400px;
-  box-shadow: 0 0 3px 1px #ccc;
-  // border: 1px solid $blue;
-  // background-color: $blue;
-  padding: 1px;
-
-  &:hover {   
-    box-shadow: 3px 3px 3px $blue-op;    
-    transition: box-shadow 0.3s ease-in-out;
-  }
-}
-
-.aboutme {
-  background-color: rgba(246, 246, 246, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
 }
 
 .d-card-info {
@@ -74,6 +67,58 @@ h1.display-1 {
   margin: 0px;
 }
 
+.d-card-image {
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 3px 1px #ccc;
+  // border: 1px solid $blue;
+  // background-color: $blue;
+  padding: 1px;
+  
+  &:hover {   
+    box-shadow: 3px 3px 3px $blue-op;    
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+.blog-card {
+  margin: 35px;
+}
+
+.blog-card-image {
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 0 3px 1px #ccc;
+
+  &:hover {   
+    box-shadow: 3px 3px 3px $blue-op;    
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+.blog-card-info {
+  margin-top: 10px;
+  min-height: 100px;
+}
+
+.blog-card-title {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.blog-card-subtitle {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.aboutme {
+  background-color: rgba(246, 246, 246, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+}
+
 .success-message {
   color: #45835b;
   padding: 10px 15px;
@@ -84,17 +129,10 @@ h1.display-1 {
   padding: 10px 15px;
 }
 
-.mt-5 {
-  background-color: rgba(215, 224, 213, 0.8);
-  height: 70px;
-  margin-top: -70px;
-  clear: both;
-}
-
 button.btn-primary {
   background-color: $blue;
   border-color: $blue;
-
+  
   &:hover {
     background-color: rgb(246, 246, 246);
     border-color: rgb(246, 246, 246);
@@ -107,37 +145,45 @@ span.nav-name.navbar-brand {
   font-size: 2rem;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 20px;
+}
+
 .icons {
   margin-bottom: 3rem;
   
   i.fab {
     color: $devil-blue;
   }
-
+  
   a {
-      padding: 0.4rem;
-
-      &:hover {
-          color: $light-color;
-          @include easeOut();
-      }
+    padding: 0.4rem;
+    
+    &:hover {
+      color: $light-color;
+      @include easeOut();
+    }
   }
 }
+
 .icons-about {
   margin-top: 3rem;
   margin-bottom: 2rem;
   
   i.fab {
     color: $light-color;
-
+    
     &:hover {
-        color: $blue;
-        @include easeOut();
+      color: $blue;
+      @include easeOut();
     }
   }
-
+  
   a {
-      padding: 0.4rem;
+    padding: 0.4rem;
   }
 }
 
@@ -146,15 +192,66 @@ span.nav-name.navbar-brand {
   
   i.fab {
     color: $light-color;
-
+    
     &:hover {
-        color: $blue;
-        @include easeOut();
+      color: $blue;
+      @include easeOut();
     }
   }
-
+  
   a {
-      padding: 0.4rem;
-
+    padding: 0.4rem;
+    
   }
 }
+
+div.container-fluid {
+  height: 100%;
+}
+
+#copyright {
+  font-size: 1.2rem;
+}
+
+#main-footer {
+  background-color: rgba(215, 224, 213, 0.8);
+  // height: 70px;
+  // margin-top: -70px;
+  clear: both;
+
+  background: darken(rgba(246, 246, 246, 0.7), 10);
+  // color: set-text-color($dark-color);
+  color: darken($blue, 20);
+  // height: 90px;
+  margin-top: auto;
+  
+  .icons {
+    
+    i.fab {
+      margin-right: 2rem;
+      margin-top: 0.7rem;
+      color: darken($blue, 10);
+    }
+    
+    a {
+      padding: 0.4rem;
+      
+      &:hover {
+        color: $light-color;
+        @include easeOut();
+      }
+    }
+  }
+}
+
+// .footer {
+//   text-align: right;
+//   padding-right: 8px;
+// }
+
+// footer {
+//   background: #288383af;
+//   padding: 6px;
+//   color: #fff;
+//   justify-content: right;
+// } 

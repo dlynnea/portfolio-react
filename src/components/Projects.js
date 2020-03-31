@@ -6,7 +6,7 @@ import curator from '../images/curator.png';
 import shape from '../images/shape.jpg';
 import hardware from '../images/hardware.jpg';
 
-class Carousel extends Component {
+class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,4 +70,4 @@ class Carousel extends Component {
     }
 }
  
-export default Carousel;
+export default Projects;
